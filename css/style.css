@@ -137,6 +137,7 @@ figure {
     position: relative;
     overflow : hidden;
     padding-top: auto;
+    text-align: center;
 }
 
 figure img{
@@ -147,7 +148,6 @@ figure img{
     position: relative;
     top : 0px;
     left : 0px;
-    text-align: center;
 }
 
 figure .main_picture{
@@ -158,13 +158,15 @@ figure .main_picture{
     position: relative;
     top : 0px;
     left : 0px;
-    margin-left: auto;
+    display: inline-block; /* 내부 요소를 인라인 블록으로 설정하여 가운데 정렬 */
+    text-align: center; /* 내부 이미지를 가운데 정렬 */
 }
 
 figure .inner2{
     width : 1180px;
-    margin : 0px auto;
     position: relative;
+    display: inline-block; /* 내부 요소를 인라인 블록으로 설정하여 가운데 정렬 */
+    text-align: center; /* 내부 이미지를 가운데 정렬 */
 }
 
 figure .inner2 a{
@@ -299,26 +301,43 @@ section .inner .wrap article .pic img {
 }
 
 /* map */
-.mobile-map .wrap{
+.mobile-map{
+    text-align: center;
+}
+
+.mobile-map .wrap img{
     width: 800px;
     height: 360px;
     border-radius: 10px;
-    margin: auto;
     overflow : hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-    margin-bottom: 100px;
+    margin-bottom: 3%;
+}
+
+.mobile-map .wrap p{
+    font: 22px/1 "Gowun Dodum";
+    color: #555;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+iframe{
+    margin-bottom:4.5%;
 }
 
 .mobile-map h1{
-    font: bold 24px/1 "Gowun Dodum";
+    font: bold 28px/1 "Gowun Dodum";
     color: #555;
     text-align: center;
     margin-bottom: 2%;
     margin-top: 5.8%;
 }
-#daumRoughmapContainer1691653088051 {
-    width: 100%; /* 부모 요소의 가로 크기에 맞게 설정 */
-    height: 100%; /* 부모 요소의 세로 크기에 맞게 설정 */
+
+.mobile-map h2{
+    font: bold 25px/1 "Gowun Dodum";
+    color: #050000;
+    text-align: center;
+    margin-bottom: 1%;
 }
 
 /* login */
@@ -370,6 +389,30 @@ section #login-form .application{
     color: #555;
     margin : auto;
 }
+
+/*schedule*/
+article {
+    background-color: black;
+    color: white;
+    height: calc(100vh - 120px);
+    text-align: center;
+    padding: auto; /* 내부 여백 추가 */
+}
+
+.schedule {
+    padding: 40px;
+}
+
+article h3 {
+    font-size: 30px;
+    margin-bottom: 30px; /* 헤더와 이미지 간격 추가 */
+}
+
+article img {
+    height: 70%;
+    width: 70%;
+}
+
 
 /*footer*/
 footer{
