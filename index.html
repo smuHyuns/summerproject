@@ -59,60 +59,42 @@
     </figure>
 
         <div class="mobile-map">
-            <h1>찾아오는길</h1>
+            <h1>경기장</h1>
             <div class="wrap">
-                <div id="daumRoughmapContainer1691652731089" class="root_daum_roughmap root_daum_roughmap_landing" style = "width:100%"></div>
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1691656540289",
-                        "key" : "2ft9s",
-                        "mapWidth" : "640",
-                        "mapHeight" : "360"
-                    }).render();
-                </script>
-            </div>
-        </div>
+                <img src = "img/lolpark.jpg">
+                <h2>LoL Park</h2>
+                <p>주소 : 서울 종로구 종로 33 그랑서울 타워[1] 3층 롤파크</p>
+            </div> 
+
+            <div id="map" style="width:500px;height:400px;"></div>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b01eaaf779a32618e7a438c13b3fee8"></script>
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(37.571097,126.981650),
+                    level: 2
+                };
         
-        <section>
-            <div class="inner">
-                <h1>추천 여행지</h1>
-                <div class="wrap">
-                    <article>
-                        <div class="pic">
-                            <img src="img/example.jpg" alt="첫번째 이미지">
-                        </div>
-                        <h2>최고의 휴양지</h2>
-                        <p>추천하는 휴양지에서 최고의 휴가를 보내세요!</p>
-                    </article>
+                var map = new kakao.maps.Map(container, options);
 
-                    <article>
-                        <div class="pic">
-                            <img src="img/example.jpg" alt="두번째 이미지">
-                        </div>
-                        <h2>최고의 휴양지</h2>
-                        <p>추천하는 휴양지에서 최고의 휴가를 보내세요!</p>
-                    </article>
+                // 지도를 클릭한 위치에 표출할 마커입니다
+                var marker = new kakao.maps.Marker({ 
+                // 지도 중심좌표에 마커를 생성합니다 
+                    position: map.getCenter() 
+                }); 
+                // 지도에 마커를 표시합니다
+                marker.setMap(map);
+            </script>
 
-                    <article>
-                        <div class="pic">
-                            <img src="img/example.jpg" alt="세번째 이미지">
-                        </div>
-                        <h2>최고의 휴양지</h2>
-                        <p>추천하는 휴양지에서 최고의 휴가를 보내세요!</p>
-                    </article>
+        </div>
 
-                    <article>
-                        <div class="pic">
-                            <img src="img/example.jpg" alt="네번째 이미지">
-                        </div>
-                        <h2>최고의 휴양지</h2>
-                        <p>추천하는 휴양지에서 최고의 휴가를 보내세요!</p>
-                    </article>
-                </div>
+        <article>
+            <div class = "schedule">
+                <h3>플레이오프 일정</h3>
+                <img src = "img/schedule.jpeg">
             </div>
 
-        </section>
+        </article>
 
 
     <footer>
